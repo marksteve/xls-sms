@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>xlsx-sms</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css">
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Cardo:400">
+    <style>
+      body {
+        font-family: Cardo;
+        text-align: center;
+      }
+      form {
+        max-width: 20em;
+        width: 100%;
+        padding: 1em;
+        margin: 0 auto;
+      }
+      input[type=file] {
+        border: 1px solid silver;
+        border-radius: 5px;
+        padding: 1em;
+        display: block;
+      }
+      button {
+        background: #eee;
+        line-height: 3em;
+        height: 3em;
+        padding: 0 3em;
+        border: 0;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <h1>xlsx-sms</h1>
+      <p>
+        Select an excel file with column headers "Number" and "Message"
+      </p>
+      <p>
+        <input type="file" name="file">
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
+  </body>
+</html>
